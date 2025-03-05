@@ -2,6 +2,7 @@ import { Link } from "react-router";
 
 export default function TripCard({
   destination,
+  destination_image,
   startDate,
   endDate,
   groupLeader,
@@ -9,10 +10,15 @@ export default function TripCard({
 }) {
   return (
     <Link to={link} className="block">
-      <div className="bg-white shadow-lg rounded-2xl p-5 w-80 border border-gray-200 transform transition duration-300 hover:scale-105">
+      <div className="bg-white shadow-lg rounded-2xl p-5 w-80 border border-gray-200 transform transition duration-300 hover:scale-105 mx-auto">
         <h2 className="text-xl font-semibold text-gray-800 mb-2">
           {destination}
         </h2>
+        <img
+          className="rounded-xl h-50 w-80 object-cover object-center"
+          src={destination_image}
+          alt={destination}
+        />
         <div className="text-sm text-gray-700">
           <p className="font-semibold text-gray-600">
             Data Inizio:{" "}
